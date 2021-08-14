@@ -40,7 +40,6 @@ func _physics_process(delta):
 	var collision = move_and_collide(velocity * delta)
 	
 	if notMoving: 
-		
 		velocity = Vector2(0, 0)
 		disappear() 
 

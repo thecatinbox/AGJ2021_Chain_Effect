@@ -8,6 +8,8 @@ var count = 0
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
+	self.position = Global.BGPos
+	count = Global.BGPosCount
 	pass # Replace with function body.
 
 
@@ -20,3 +22,6 @@ func _process(delta):
 	if count >= 1046: 
 		self.position -= 1046 * dir.rotated(rotation)
 		count = 0
+		
+	Global.BGPos = self.position
+	Global.BGPosCount = count
