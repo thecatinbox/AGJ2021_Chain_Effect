@@ -1,7 +1,6 @@
 extends Node
 
 var start = true
-var number = 40 
 var speed = 150
 
 var circle = load("res://Scene/Circles.tscn")
@@ -13,10 +12,13 @@ var rndY
 func _ready():
 	$AudioStreamPlayer2D.stream = sound
 	$AudioStreamPlayer2D.play()
+	
+	randomize() 
+	Global.number = 2 * (randi() % 25 + 1)
 
 func _process(delta):
 	if start: 
-		for i in range(number): 
+		for i in range(Global.number): 
 			spawn() 
 		start = false
 		

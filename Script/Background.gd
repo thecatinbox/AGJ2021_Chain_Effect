@@ -17,6 +17,6 @@ func _process(delta):
 	self.position += dir.rotated(rotation)
 	count += 1
 	
-	if count >= 840: 
-		self.position -= 840 * dir.rotated(rotation)
+	if count >= 1046: 
+		self.position -= 1046 * dir.rotated(rotation)
 		count = 0
