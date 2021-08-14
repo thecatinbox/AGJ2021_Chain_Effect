@@ -2,6 +2,7 @@ extends KinematicBody2D
 
 var dir = Vector2(1, 0)
 var velocity
+var type = "CIRCLE"
 
 var notMoving = false
 var scl = 1
@@ -16,9 +17,9 @@ func _physics_process(delta):
 		self.position += dir.rotated(rotation)
 	else: 
 		var collision = move_and_collide(velocity * delta)
-		if collision:
+		if collision and collision.get_collider().type == "CIRCLE":
 			collision.get_collider().notMoving = true
-			
+		
 		disappear() 
 		
 func disappear(): 

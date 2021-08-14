@@ -8,17 +8,6 @@ var circle = load("res://Scene/Circles.tscn")
 var rndX
 var rndY
 
-# Called when the node enters the scene tree for the first time.
-func _ready():
-	
-	var c = circle.instance()
-	c.position = Vector2(1024 / 2, 300)# get_global_mouse_position()
-	c.notMoving = true
-	get_parent().add_child(c)
-	
-	for i in range(0, number): 
-		spawn() 
-
 func _process(delta):
 	if start: 
 		for i in range(number): 
