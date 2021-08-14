@@ -2,11 +2,17 @@ extends Node
 
 var start = true
 var number = 40 
-var speed = 200
+var speed = 150
+
 var circle = load("res://Scene/Circles.tscn")
+var sound = preload("res://Music/Music.wav")
 
 var rndX
 var rndY
+
+func _ready():
+	$AudioStreamPlayer2D.stream = sound
+	$AudioStreamPlayer2D.play()
 
 func _process(delta):
 	if start: 

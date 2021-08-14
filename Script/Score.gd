@@ -1,6 +1,7 @@
 extends Node2D
 
 var font
+var text
 
 func _ready():
 	var label = Label.new()
@@ -8,7 +9,9 @@ func _ready():
 	label.queue_free()
 	
 func _draw():
-	draw_string(font, Vector2(30, 0), str(Global.score))
+	
+	text = 'Score: ' + str(Global.score)
+	draw_string(font, Vector2(30, 0), text, Color( 1, 0.65, 0, 1 ))
 	
 func _process(delta):
 	update() 
