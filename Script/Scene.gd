@@ -6,7 +6,10 @@ var sound = preload("res://Music/meow.wav")
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	pass
+	pass 
+
+func _process(delta):
+	OS.window_size = Vector2(1024,600)
 
 func _input(event):
 	if event is InputEventMouseButton and event.pressed and event.button_index == 1:
