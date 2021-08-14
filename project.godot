@@ -18,7 +18,6 @@ config/icon="res://icon.png"
 [autoload]
 
 Global="*res://Script/Global.gd"
-BGMusic="*res://Scene/BGMusic.tscn"
 
 [input]
 
