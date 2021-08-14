@@ -7,7 +7,7 @@ var notMoving = false
 var scl = 1
 
 var destroy = false 
-var timer = 150
+var timer = 100
 
 func _physics_process(delta):
 	var collision = move_and_collide(velocity * delta)
@@ -15,10 +15,11 @@ func _physics_process(delta):
 	if notMoving: 
 		
 		if collision:
-			if collision.get_collider().type == "CIRCLE" and collision.get_collider().notMoving == false: 
-				collision.get_collider().notMoving = true
+			if collision.get_collider().type == "CIRCLE": 
 				collision.get_collider().velocity = Vector2(0, 0)
-				Global.score += 1
+				if collision.get_collider().notMoving == false: 
+					collision.get_collider().notMoving = true
+					Global.score += 1
 		
 		disappear() 
 		
