@@ -7,7 +7,7 @@ var notMoving = false
 var scl = 1
 
 var destroy = false 
-var timer = 60
+var timer = 120
 
 var catType = randi() % 3 + 1
 var startSprite

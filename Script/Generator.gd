@@ -14,7 +14,7 @@ func _ready():
 	$AudioStreamPlayer2D.play()
 	
 	randomize() 
-	Global.number = 2 * (randi() % 25 + 1)
+	Global.number = 2 * (randi() % 15 + 10)
 
 func _process(delta):
 	if start: 
