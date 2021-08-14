@@ -7,7 +7,7 @@ var notMoving = false
 var scl = 1
 
 var destroy = false 
-var timer = 120
+var timer = 90
 
 var catType = randi() % 3 + 1
 var startSprite
@@ -17,6 +17,8 @@ var endSprite
 var sound = preload("res://Music/meow.wav")
 
 func _ready():
+	
+	add_to_group("circles")
 	
 	if catType == 1: 
 		startSprite = load("res://Image/cat1_1.png")
