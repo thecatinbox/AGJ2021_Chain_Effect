@@ -2,7 +2,7 @@ extends Node
 
 var start = true
 var number = 40 
-var speed = 1
+var speed = 200
 var circle = load("res://Scene/Circles.tscn")
 
 var rndX
@@ -24,6 +24,6 @@ func spawn():
 	rndY = rand_range(0, 600)
 	
 	c.position =  Vector2(rndX, rndY)
-	c.dir = speed * (Vector2(rand_range(-1, 1), rand_range(-1, 1))).normalized()
+	c.velocity = speed * (Vector2(rand_range(-1, 1), rand_range(-1, 1))).normalized()
 	get_parent().add_child(c)
 

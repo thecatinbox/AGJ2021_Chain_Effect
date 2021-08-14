@@ -1,5 +1,5 @@
 extends Node
-
+var type = "WALL"
 
 # Declare member variables here. Examples:
 # var a = 2

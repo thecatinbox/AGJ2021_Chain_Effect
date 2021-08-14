@@ -10,3 +10,5 @@ func _ready():
 func _draw():
 	draw_string(font, Vector2(30, 0), str(Global.score))
 	
+func _process(delta):
+	update() 

@@ -1,7 +1,6 @@
 extends KinematicBody2D
 
-var dir = Vector2(1, 0)
-var velocity
+var velocity = Vector2(0, 0)
 var type = "CIRCLE"
 
 var notMoving = false
@@ -11,22 +10,22 @@ var destroy = false
 var timer = 150
 
 func _physics_process(delta):
-	velocity = dir.rotated(rotation)
+	var collision = move_and_collide(velocity * delta)
 	
-	if not notMoving: 
-		self.position += dir.rotated(rotation)
-	else: 
-		var collision = move_and_collide(velocity * delta)
+	if notMoving: 
 		
 		if collision:
 			if collision.get_collider().type == "CIRCLE" and collision.get_collider().notMoving == false: 
 				collision.get_collider().notMoving = true
+				collision.get_collider().velocity = Vector2(0, 0)
 				Global.score += 1
-			else: 
-				velocity = velocity.bounce(collision.normal)
-		
 		
 		disappear() 
+		
+	else: 
+
+		if collision: # and collision.get_collider().type == "WALL":
+			velocity = velocity.bounce(collision.normal)
 		
 func disappear(): 
 	scale = Vector2(scl, scl)
