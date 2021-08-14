@@ -17,8 +17,14 @@ func _physics_process(delta):
 		self.position += dir.rotated(rotation)
 	else: 
 		var collision = move_and_collide(velocity * delta)
-		if collision and collision.get_collider().type == "CIRCLE":
-			collision.get_collider().notMoving = true
+		
+		if collision:
+			if collision.get_collider().type == "CIRCLE" and collision.get_collider().notMoving == false: 
+				collision.get_collider().notMoving = true
+				Global.score += 1
+			else: 
+				velocity = velocity.bounce(collision.normal)
+		
 		
 		disappear() 
 		

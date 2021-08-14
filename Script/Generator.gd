@@ -13,6 +13,8 @@ func _process(delta):
 		for i in range(number): 
 			spawn() 
 		start = false
+		
+	print(Global.score)
 
 func spawn(): 
 
