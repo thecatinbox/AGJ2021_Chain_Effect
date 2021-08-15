@@ -54,8 +54,8 @@ func _physics_process(delta):
 				
 				$AudioStreamPlayer2D.stream = sound
 				$AudioStreamPlayer2D.play()
-			else: 
-				look_at(position + velocity)
+		else: 
+			look_at(position + velocity)
 		
 func disappear(): 
 	scale = Vector2(scl, scl)

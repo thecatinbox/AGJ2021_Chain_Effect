@@ -19,5 +19,5 @@ func _ready():
 func _on_Area2D_input_event(viewport, event, shape_idx):
 	if event is InputEventMouseButton and event.is_pressed(): 
 		Global.level = 0
-		get_tree().reload_current_scene()
+		get_tree().change_scene("res://Scene/StartScene.tscn")
 		queue_free() 
