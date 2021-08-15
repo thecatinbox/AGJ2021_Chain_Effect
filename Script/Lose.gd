@@ -19,7 +19,8 @@ func _ready():
 func _on_Area2D_input_event(viewport, event, shape_idx):
 	if event is InputEventMouseButton and event.is_pressed(): 
 		
-		Global.highScore = Global.level
+		if Global.level > Global.highScore:
+			Global.highScore = Global.level
 		Global.level = 0
 		get_tree().change_scene("res://Scene/StartScene.tscn")
 		queue_free() 
