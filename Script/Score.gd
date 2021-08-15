@@ -19,7 +19,7 @@ func _ready():
 	
 func _draw():
 	
-	text = 'Goal: ' + str(Global.score) + '/' + str(Global.number / 2)
+	text = 'Score: ' + str(Global.score) + '/' + str(Global.number / 2)
 	draw_string(dynamic_font, Vector2(20, 0), text)
 	
 func _process(delta):
