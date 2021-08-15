@@ -13,8 +13,8 @@ func _ready():
 	Global.number = 2 * (randi() % 15 + 10)
 	Global.speed = randi() % 200 + 150
 	
-	$AudioStreamPlayer2D.stream = music
-	$AudioStreamPlayer2D.play(Global.musicPos)
+	$AudioStreamPlayer.stream = music
+	$AudioStreamPlayer.play(Global.musicPos)
 
 func _process(delta):
 
@@ -23,7 +23,7 @@ func _process(delta):
 			spawn() 
 		start = false
 		
-	Global.musicPos = $AudioStreamPlayer2D.get_playback_position()
+	Global.musicPos = $AudioStreamPlayer.get_playback_position()
 
 func spawn(): 
 

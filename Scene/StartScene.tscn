@@ -24,8 +24,6 @@ position = Vector2( 250, 560 )
 position = Vector2( 512, 300 )
 texture = ExtResource( 6 )
 
-[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
-
 [node name="StartButton" type="TextureButton" parent="."]
 anchor_left = 0.5
 anchor_top = 1.0
@@ -55,6 +53,8 @@ __meta__ = {
 }
 
 [node name="TitleText" parent="." instance=ExtResource( 9 )]
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 
 [connection signal="pressed" from="StartButton" to="." method="_on_StartButton_pressed"]
 [connection signal="pressed" from="QuitButton" to="." method="_on_QuitButton_pressed"]

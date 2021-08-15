@@ -14,6 +14,7 @@ config/name="When Cats Yawn"
 config/description="Left click to drop your yawning cat and make as many cats yawn as possible! "
 run/main_scene="res://Scene/StartScene.tscn"
 config/icon="res://icon.png"
+config/windows_native_icon="res://icon.ico"
 
 [autoload]
 
