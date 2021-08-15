@@ -5,6 +5,7 @@ var music = load("res://Music/Music.ogg")
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	$AudioStreamPlayer.stream = music
+	Global.musicPos = 0
 	$AudioStreamPlayer.play() # Global.musicPos
 	pass 
 
