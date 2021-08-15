@@ -57,5 +57,4 @@ __meta__ = {
 [node name="TitleText" parent="." instance=ExtResource( 9 )]
 
 [connection signal="pressed" from="StartButton" to="." method="_on_StartButton_pressed"]
-[connection signal="mouse_entered" from="QuitButton" to="." method="_on_QuitButton_mouse_entered"]
 [connection signal="pressed" from="QuitButton" to="." method="_on_QuitButton_pressed"]
