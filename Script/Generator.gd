@@ -11,7 +11,7 @@ var rndY
 func _ready():
 	randomize() 
 	Global.number = 2 * (randi() % 15 + 10)
-	Global.speed = randi() % 200 + 150
+	Global.speed = randi() % 200 + 100
 	
 	$AudioStreamPlayer2D.stream = music
 	$AudioStreamPlayer2D.play(Global.musicPos)
