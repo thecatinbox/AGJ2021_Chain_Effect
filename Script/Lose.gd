@@ -23,5 +23,8 @@ func _on_Area2D_input_event(viewport, event, shape_idx):
 			Global.highScore = Global.level
 		Global.level = 0
 		Global.start = 1
+		
+		Global.BGPos = Vector2(0, 0)
+		Global.BGPosCount = 0
 		get_tree().change_scene("res://Scene/StartScene.tscn")
 		queue_free() 
