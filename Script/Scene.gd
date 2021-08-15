@@ -57,11 +57,3 @@ func play():
 	c.position = get_global_mouse_position()
 	c.notMoving = true
 	get_parent().add_child(c)
-
-
-
-func _on_StartButton_pressed():
-	get_tree().change_scene("res://Scene/Scene.tscn")
-
-func _on_QuitButton_pressed():
-	get_tree().quit()

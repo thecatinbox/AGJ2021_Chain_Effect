@@ -10,14 +10,19 @@ config_version=4
 
 [application]
 
-config/name="Chain_Effect"
+config/name="When Cats Yawn"
+config/description="Left click to drop your yawning cat and make as many cats yawn as possible! "
 run/main_scene="res://Scene/StartScene.tscn"
 config/icon="res://icon.png"
 
 [autoload]
 
 Global="*res://Script/Global.gd"
-BGMusic="*res://Scene/BGMusic.tscn"
+
+[global]
+
+name=false
+applic=false
 
 [input]
 
