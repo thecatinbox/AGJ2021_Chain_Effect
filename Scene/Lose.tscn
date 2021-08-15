@@ -5,7 +5,7 @@
 [ext_resource path="res://Image/BtnRestart.png" type="Texture" id=3]
 
 [sub_resource type="CircleShape2D" id=1]
-radius = 47.1239
+radius = 62.1537
 
 [node name="Win" type="Node2D"]
 z_index = 1
@@ -19,12 +19,12 @@ scale = Vector2( 0.5, 0.5 )
 texture = ExtResource( 2 )
 
 [node name="Close" type="Sprite" parent="Area2D"]
-position = Vector2( 212.418, -144.34 )
-scale = Vector2( 0.2, 0.2 )
+position = Vector2( 219.969, -125.462 )
+scale = Vector2( 0.25, 0.25 )
 texture = ExtResource( 3 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
-position = Vector2( 212.762, -144.583 )
+position = Vector2( 219.369, -124.762 )
 shape = SubResource( 1 )
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="Area2D"]

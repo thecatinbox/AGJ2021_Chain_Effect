@@ -18,6 +18,7 @@ func _ready():
 func _process(delta):
 	OS.window_size = Vector2(1024,600)
 	# Global.audioPos = $AudioStreamPlayer2D.get_playback_position()
+	Global.start = create
 	
 	if create == true && result == false: 
 		

@@ -1,5 +1,5 @@
 extends Area2D
-
+var sound = preload("res://Music/meow.wav")
 
 # Declare member variables here. Examples:
 # var a = 2
@@ -18,10 +18,6 @@ func _ready():
 
 func _on_Area2D_input_event(viewport, event, shape_idx):
 	if event is InputEventMouseButton and event.is_pressed(): 
+		$AudioStreamPlayer2D.stream = sound
+		$AudioStreamPlayer2D.play()
 		
-		if Global.level > Global.highScore:
-			Global.highScore = Global.level
-		Global.level = 0
-		Global.start = 1
-		get_tree().change_scene("res://Scene/StartScene.tscn")
-		queue_free() 
