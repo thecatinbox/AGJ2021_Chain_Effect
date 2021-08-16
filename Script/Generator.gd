@@ -29,8 +29,8 @@ func spawn():
 
 	var c = circle.instance()
 	
-	rndX = randi() % 1024
-	rndY = randi() % 600
+	rndX = randi() % 1004 + 10
+	rndY = randi() % 580 + 10
 	
 	c.position =  Vector2(rndX, rndY)
 	c.velocity = Global.speed * (Vector2(rand_range(-1, 1), rand_range(-1, 1))).normalized()
